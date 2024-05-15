@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Objects;
+
 @Getter
 @Setter
 @Embeddable
@@ -25,5 +27,18 @@ public class Location {
                 ", city='" + city + '\'' +
                 ", street='" + street + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        Location location = (Location) object;
+        return Objects.equals(country, location.country) && Objects.equals(state, location.state) && Objects.equals(city, location.city) && Objects.equals(street, location.street);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(country, state, city, street);
     }
 }
