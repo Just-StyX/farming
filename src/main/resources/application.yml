@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/jay_va
+    password: podsam777
+    username: jay7
+
+logging:
+  level:
+    root: warn

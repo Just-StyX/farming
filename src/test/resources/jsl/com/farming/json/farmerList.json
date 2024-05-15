@@ -1,0 +1,42 @@
+{
+  "age":24,
+  "name":"test name",
+  "location":{
+    "country":"United State",
+    "state":"Georgia",
+    "city":"Atlanta",
+    "street":"123 Mountain View"
+  },
+  "farms": [
+    {
+      "farmType":"SMALL",
+      "farmSize":2450.5,
+      "location":{
+        "country":"United State",
+        "state":"Georgia",
+        "city":"Atlanta",
+        "street":"123 Mountain View"
+      }
+    },
+    {
+      "farmType":"LARGE",
+      "farmSize":2450.5,
+      "location":{
+        "country":"United State",
+        "state":"Georgia",
+        "city":"Atlanta",
+        "street":"123 Mountain View"
+      }
+    },
+    {
+      "farmType":"SMALL",
+      "farmSize":2450.5,
+      "location":{
+        "country":"United State",
+        "state":"Georgia",
+        "city":"Atlanta",
+        "street":"123 Mountain View"
+      }
+    }
+  ]
+}

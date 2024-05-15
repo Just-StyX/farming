@@ -1,0 +1,10 @@
+{
+  "age":24,
+  "name":"test name",
+  "location":{
+    "country":"United State",
+    "state":"Georgia",
+    "city":"Atlanta",
+    "street":"123 Mountain View"
+  }
+}
