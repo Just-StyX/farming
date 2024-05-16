@@ -3,6 +3,8 @@ package jsl.com.farming.service;
 import jsl.com.farming.entities.Farm;
 import jsl.com.farming.entities.Farmer;
 import jsl.com.farming.repository.FarmerRepository;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -51,6 +53,11 @@ public class FarmerServices {
 
     public List<Farmer> findAllFarmers() {
         return farmerRepository.findAll();
+    }
+    public List<Farmer> findAll(int page, int size) {
+        Sort.TypedSort<Farmer> sort = Sort.sort(Farmer.class);
+        return farmerRepository
+                .findAllFarmers(PageRequest.of(page, size, sort.by(Farmer::getName))).getContent();
     }
 
     public void deleteFarmerById(String farmerId) {
